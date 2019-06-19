@@ -4826,7 +4826,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1756221844}
   - component: {fileID: 1756221843}
-  - component: {fileID: 1756221846}
   - component: {fileID: 1756221845}
   - component: {fileID: 1756221842}
   - component: {fileID: 1756221841}
@@ -4911,20 +4910,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dcf112d793ab4667806a0c3d38830e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1756221846
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1756221840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b88517fa79d5048bbbff49c02822c2af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  CarPrefab: {fileID: 1274968133711974, guid: 3c1120247710b4dbe9a32aa2f22a9c32, type: 2}
-  coinPrefab: {fileID: 1979013106382006, guid: ef64aa31aebad464c9cd8f99760930ad, type: 2}
-  conePrefab: {fileID: 1668910610942700, guid: 1a671f08aa8294ed6ade101fce373f93, type: 2}
 --- !u!1001 &1776381030
 Prefab:
   m_ObjectHideFlags: 0

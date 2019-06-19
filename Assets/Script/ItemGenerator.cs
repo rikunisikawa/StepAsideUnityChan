@@ -18,7 +18,7 @@ public class ItemGenerator : MonoBehaviour {
 			int num = Random.Range (1, 11);//1~11?
 			if (num <= 2) {
 				for (float j = -1; j <= 1; j += 0.4f) { //なんでこの式？
-					GameObject come = Instantiate (conePrefab) as GameObject;//コーンの式　
+					GameObject cone = Instantiate (conePrefab) as GameObject;//coneprefabの数値を使えるようにするもの
 					conePrefab.transform.position = new Vector3 (4 * j, conePrefab.transform.position.y, i);//1直線に並べる
 				}
 			} else {
