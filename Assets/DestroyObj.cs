@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestloyObj : MonoBehaviour {
+public class DestroyObj : MonoBehaviour {
 	
 	public GameObject CarPrefab;
 	public GameObject coinPrefab;
@@ -12,23 +12,30 @@ public class DestloyObj : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		GameObject car = Instantiate (CarPrefab) as GameObject;//carPrefabの数値を使えるようにするもの
+		GameObject coin = Instantiate (coinPrefab) as GameObject;//coinPrefabの数値を使えるようにするもの
+		GameObject cone = Instantiate (conePrefab) as GameObject;//coneprefabの数値を使えるようにするもの
 	}
 	
 	// Update is called once per frame
 	void Update () {
+
 		//Debug.Log (Camera.main.transform.localPosition);
 		if(isDestroy == false)
 		{
-			if (CarPrefab.transform.position.z - Camera.main.transform.localPosition.z < 0) {
-				Destroy (gameObject);
+			if (CarPrefab.transform.position.z < Camera.main.transform.localPosition.z) {
+				GameObject carDes = Instantiate (CarPrefab);
+				Destroy (carDes);
 				isDestroy = true;
 			}
-			if (coinPrefab.transform.position.z - Camera.main.transform.localPosition.z < 0) {
-				Destroy (gameObject);
+			if (coinPrefab.transform.position.z < Camera.main.transform.localPosition.z) {
+				GameObject coinDes = Instantiate (coinPrefab);
+				Destroy (coinDes);
 				isDestroy = true;
 			}
-			if (conePrefab.transform.position.z - Camera.main.transform.localPosition.z < 0) {
-				Destroy (gameObject);
+			if (conePrefab.transform.position.z < Camera.main.transform.localPosition.z) {
+				GameObject coneDes = Instantiate (conePrefab);
+				Destroy (coneDes);
 				isDestroy = true;
 			}
 	    }
